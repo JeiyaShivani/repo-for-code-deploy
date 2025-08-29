@@ -1,11 +1,78 @@
 <html>
     <head>
         <title>Sample Website - AWS CodePipeline Step by Step</title>
+        <style>
+            body {
+                text-align: center;
+                font-family: Verdana, sans-serif;
+                margin: 1%;
+                background: linear-gradient(to right, #e3f2fd, #bbdefb);
+            }
+            h1 {
+                color: navy;
+                transition: transform 0.3s ease, color 0.3s ease;
+            }
+            h1:hover {
+                transform: scale(1.1);
+                color: darkorange;
+            }
+            nav {
+                background-color: navy;
+                padding: 10px;
+            }
+            nav a {
+                color: white;
+                margin: 0 15px;
+                text-decoration: none;
+                font-weight: bold;
+                transition: color 0.3s;
+            }
+            nav a:hover {
+                color: yellow;
+            }
+            footer {
+                margin-top: 40px;
+                padding: 10px;
+                background-color: #0d47a1;
+                color: white;
+                font-size: 14px;
+            }
+            #clock {
+                font-size: 20px;
+                color: darkred;
+                margin-top: 20px;
+            }
+        </style>
     </head>
-    <body style="text-align:center;font-family:Verdana;margin:1%;">
-        <h1 style="color:navy">Welcome to Our Website!</h1>
+    <body>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Projects</a>
+            <a href="#">Contact</a>
+        </nav>
+
+        <h1>Welcome to Our Website!</h1>
+        <h2>I have changed this file</h2>
         <hr>
         <p>This is a simple, static website that we deploy by creating a pipeline on AWS CodePipeline.</p>
-        <h2>Website Version: 4.0</h2>
+        <h2>Website Version: 4.0 🚀</h2>
+
+        <div id="clock"></div>
+
+        <footer>
+            © 2025 Sample Website | Built with ❤️ and AWS CodePipeline
+        </footer>
+
+        <script>
+            function updateClock() {
+                const now = new Date();
+                document.getElementById("clock").innerText = 
+                    now.toLocaleTimeString();
+            }
+            setInterval(updateClock, 1000);
+            updateClock();
+        </script>
     </body>
 </html>
+
